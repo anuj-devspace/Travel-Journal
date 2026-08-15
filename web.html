@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Journal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="main-header">
+    <h1 class="title">🌍 Travel Journal</h1>
+    <p class="subtitle">Record your adventures and explore country details</p>
+  </header>
+
+  <main id="content">
+    <section id="entry-form-section">
+      <h2 class="section-heading">Add a New Entry</h2>
+      <form id="journalForm" class="form">
+        <div class="form-group">
+          <label for="country" class="form-label">Country</label>
+          <select id="country" name="country" class="form-input" required>
+            <option value="" disabled selected>Select a country</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" id="title" name="title" class="form-input" placeholder="e.g. Summer in Paris" required>
+        </div>
+
+        <div class="form-group">
+          <label for="notes" class="form-label">Notes</label>
+          <textarea id="notes" name="notes" class="form-input" placeholder="Write about your experience..." required></textarea>
+        </div>
+
+        <button type="submit" id="save-btn" class="btn">➕ Save Entry</button>
+      </form>
+    </section>
+
+    <section id="country-info-section">
+      <h2 class="section-heading">Country Information</h2>
+      <div id="info-container" class="info-box">
+        <p class="info-placeholder">Select a country above to see its flag, capital, population, currency, region, and languages.</p>
+      </div>
+    </section>
+
+    <section id="entries-section">
+      <h2 class="section-heading">Your Journal Entries</h2>
+      <table id="entryTable" class="table">
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>Title</th>
+            <th>Notes</th>
+            <th>Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="entryBody">
+          <!-- Entries will appear here dynamically -->
+        </tbody>
+      </table>
+      <p id="no-entries" class="empty-message">No entries yet — start by adding your first adventure above!</p>
+    </section>
+  </main>
+
+  <footer id="main-footer">
+    <p class="footer-text">&copy; 2026 Travel Journal</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
